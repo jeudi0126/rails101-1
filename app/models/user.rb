@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         has_many :groups_relationships
-         has_many :participated_proups, :through => :groups_relationships, :source => :group
+         has_many :group_relationships
+         has_many :participated_proups, :through => :group_relationships, :source => :group
 end
